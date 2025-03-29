@@ -1,0 +1,131 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+import ServiceCard from './ServiceCard.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Define service cards with proper links for each language
+const services = [
+  {
+    title: t('services.cameraCommercio'),
+    description: t('services.cameraCommercio.desc'),
+    icon: '/images/service-icon-1.svg',
+    link: `/${lang === 'it' ? '' : 'en/'}pratiche-camera-commercio`
+  },
+  {
+    title: t('services.revenue'),
+    description: t('services.revenue.desc'),
+    icon: '/images/service-icon-2.svg',
+    link: `/${lang === 'it' ? '' : 'en/'}pratiche-agenzia-entrate`
+  },
+  {
+    title: t('services.inps'),
+    description: t('services.inps.desc'),
+    icon: '/images/service-icon-3.svg',
+    link: `/${lang === 'it' ? '' : 'en/'}pratiche-inps`
+  },
+  {
+    title: t('services.municipality'),
+    description: t('services.municipality.desc'),
+    icon: '/images/service-icon-1.svg',
+    link: `/${lang === 'it' ? '' : 'en/'}pratiche-comune`
+  },
+  {
+    title: t('services.cadastral'),
+    description: t('services.cadastral.desc'),
+    icon: '/images/service-icon-2.svg',
+    link: `/${lang === 'it' ? '' : 'en/'}pratiche-catastali`
+  },
+  {
+    title: t('services.digital'),
+    description: t('services.digital.desc'),
+    icon: '/images/service-icon-3.svg',
+    link: `/${lang === 'it' ? '' : 'en/'}servizi-digitali`
+  },
+  {
+    title: t('services.professional'),
+    description: t('services.professional.desc'),
+    icon: '/images/service-icon-1.svg',
+    link: `/${lang === 'it' ? '' : 'en/'}servizi-professionisti`
+  },
+  {
+    title: t('services.trademark'),
+    description: t('services.trademark.desc'),
+    icon: '/images/service-icon-2.svg',
+    link: `/${lang === 'it' ? '' : 'en/'}registrazione-marchi`
+  },
+  {
+    title: t('services.digipram'),
+    description: t('services.digipram.desc'),
+    icon: '/images/service-icon-3.svg',
+    link: `/${lang === 'it' ? '' : 'en/'}digipram`
+  },
+  {
+    title: t('services.estero'),
+    description: t('services.estero.desc'),
+    icon: '/images/service-icon-1.svg',
+    link: `/${lang === 'it' ? '' : 'en/'}${lang === 'it' ? 'entrare-nel-mercato-italiano' : 'entering-italian-market'}`
+  }
+];
+---
+
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="section-header animate-on-scroll from-bottom">
+      <h2>{t('sections.services')}</h2>
+      <p>{t('sections.services.subtitle')}</p>
+    </div>
+    <div class="services-grid">
+      {services.map((service) => (
+        <ServiceCard
+          title={service.title}
+          description={service.description}
+          icon={service.icon}
+          link={service.link}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-header h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section-header p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .section-header h2 {
+      font-size: 2rem;
+    }
+    
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

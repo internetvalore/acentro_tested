@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import AboutUs from '../components/AboutUs.astro';
+import WhyUs from '../components/WhyUs.astro';
+import Services from '../components/Services.astro';
+import Contact from '../components/Contact.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Acentro Services">
+  <Header />
+  <Hero />
+  <Services />
+  <AboutUs />
+  <WhyUs />
+  <Contact />
+  <Footer />
+</Layout>
+
+<style>
+	
+</style>

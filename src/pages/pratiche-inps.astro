@@ -1,0 +1,163 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceDetailHeader from '../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Pratiche INPS - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Pratiche INPS" 
+    description="Soluzioni complete per tutte le pratiche relative all'INPS"
+    icon="/images/service-icon-3.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>Acentro Services</strong> offre assistenza completa per tutte le pratiche relative all'<strong>INPS</strong> esclusivamente per entità giuridiche (aziende, società, ecc.) e non per persone fisiche. 
+          Supportiamo imprese e professionisti nella gestione degli adempimenti previdenziali.
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>I Nostri Servizi INPS</h2>
+        <div class="service-boxes">
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Iscrizioni, modifiche e cessazioni" 
+              description="Gestione completa delle pratiche di iscrizione, variazione e cessazione delle posizioni INPS."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Accesso per verifiche di posizioni" 
+              description="Supporto per la verifica delle posizioni contributive presso l'INPS."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Duplicati modello Certificazione Unica" 
+              description="Assistenza per l'ottenimento di duplicati della Certificazione Unica (ex CUD)."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Verifiche cartelle ed avvisi bonari" 
+              description="Controllo e verifica di cartelle esattoriali e avvisi bonari emessi dall'INPS."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Duplicato modello F24" 
+              description="Supporto per l'ottenimento di duplicati dei modelli F24 per i contributi."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Certificati DURC" 
+              description="Assistenza per l'ottenimento del Documento Unico di Regolarità Contributiva."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Hai bisogno di assistenza per le tue pratiche INPS?</h3>
+        <p>Contattaci per una consulenza personalizzata e scopri come possiamo aiutarti a semplificare i tuoi adempimenti previdenziali.</p>
+        <a href="/contattaci" class="btn btn-primary">Richiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-boxes > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

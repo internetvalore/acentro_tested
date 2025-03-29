@@ -1,0 +1,76 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="service-header">
+  <div class="container">
+    <div class="service-header-content">
+      <h1>{title}</h1>
+      {subtitle && <p>{subtitle}</p>}
+      <div class="breadcrumbs">
+        <a href={`/${lang === 'it' ? '' : 'en/'}`}>{t('nav.home')}</a> > 
+        <a href={`/${lang === 'it' ? '' : 'en/'}#servizi`}>{t('nav.services')}</a> > 
+        <span>{title}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .service-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 0;
+  }
+  
+  .service-header-content {
+    text-align: center;
+  }
+  
+  .service-header-content h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-header-content p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .breadcrumbs {
+    font-size: 0.9rem;
+  }
+  
+  .breadcrumbs a {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .breadcrumbs a:hover {
+    color: white;
+  }
+  
+  .breadcrumbs span {
+    color: var(--accent-color);
+  }
+  
+  @media (max-width: 768px) {
+    .service-header-content h1 {
+      font-size: 2rem;
+    }
+    
+    .service-header-content p {
+      font-size: 1.1rem;
+    }
+  }
+</style>

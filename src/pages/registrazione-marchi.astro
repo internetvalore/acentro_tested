@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceDetailHeader from '../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Registrazione Marchi - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Registrazione Marchi" 
+    description="Proteggi il tuo marchio con i nostri servizi di registrazione e tutela"
+    icon="/images/service-icon-2.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>Acentro Services</strong> offre un servizio completo per la <strong>registrazione e la tutela del tuo marchio</strong>, 
+          garantendo la protezione del tuo brand e la sua unicità sul mercato.
+        </p>
+        <p>
+          Il nostro team di esperti ti assiste in ogni fase del processo, dalla ricerca di anteriorità alla registrazione del marchio presso gli uffici competenti.
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Servizi di Registrazione Marchi</h2>
+        <div class="service-boxes">
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Ricerca di anteriorità" 
+              description="Verifica della disponibilità del marchio e della sua originalità rispetto a marchi già registrati."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Deposito domanda di registrazione" 
+              description="Predisposizione e deposito della domanda di registrazione del marchio presso l'UIBM (Ufficio Italiano Brevetti e Marchi)."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Assistenza legale" 
+              description="Assistenza legale specializzata in materia di marchi e brevetti per la tutela dei tuoi diritti di proprietà intellettuale."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+        </div>
+      </div>
+      
+      <div class="service-category">
+        <h2>Tutela del Marchio</h2>
+        <div class="service-boxes">
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Monitoraggio del marchio" 
+              description="Monitoraggio costante del mercato per individuare eventuali utilizzi non autorizzati del tuo marchio."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Opposizione a marchi simili" 
+              description="Presentazione di opposizioni contro domande di registrazione di marchi simili al tuo, per tutelare la tua esclusiva."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Azioni legali" 
+              description="Avvio di azioni legali contro chi utilizza il tuo marchio senza autorizzazione, per ottenere il risarcimento dei danni subiti."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Proteggi il tuo marchio con Acentro Services</h3>
+        <p>Contattaci per una consulenza personalizzata e scopri come possiamo aiutarti a registrare e tutelare il tuo marchio.</p>
+        <a href="/contattaci" class="btn btn-primary">Richiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-boxes > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

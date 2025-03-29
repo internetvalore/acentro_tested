@@ -1,0 +1,258 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import ServiceDetailHeader from '../../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../../components/ServiceDetailBox.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t('services.estero')}>
+  <Header />
+  <ServiceDetailHeader 
+    title={t('services.estero')}
+    subtitle={t('services.estero.desc')}
+  />
+
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro animate-on-scroll from-bottom">
+        <h2>Turnkey Service for Investors</h2>
+        <p class="intro-text">
+          We offer our experience and network of contacts to guide you through every phase of the localization process in Italy. From choosing the most suitable corporate structure, to complete management of bureaucratic procedures, we offer you a personalized and smooth path. Entrust us with the task of translating and interpreting the complex world of Italian regulations, so you can focus on your core business and seize market opportunities with confidence.
+        </p>
+      </div>
+
+      <div class="service-boxes-grid">
+        <div class="service-box animate-on-scroll from-left">
+          <div class="icon-container">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h3>Strategic and Legal Consulting</h3>
+          <p>Preliminary analysis of the best legal form, guidance on corporate, tax and labor law. We guide you in choosing the structure that best suits your needs, with a detailed analysis of the advantages and legal obligations.</p>
+        </div>
+
+        <div class="service-box animate-on-scroll from-right">
+          <div class="icon-container">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3>Administrative Assistance</h3>
+          <p>Management and preparation of all necessary documentation, obtaining tax codes, registrations and permits. We take care of all bureaucratic procedures, saving you time and complications, ensuring compliance with all Italian regulations.</p>
+        </div>
+
+        <div class="service-box animate-on-scroll from-left">
+          <div class="icon-container">
+            <i class="fas fa-language"></i>
+          </div>
+          <h3>Translation and Cultural Mediation Services</h3>
+          <p>Facilitation in communications, translations and interpreting to overcome language and cultural barriers. We offer you complete support to understand not only the language, but also the cultural nuances of doing business in Italy.</p>
+        </div>
+
+        <div class="service-box animate-on-scroll from-right">
+          <div class="icon-container">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>Networking and Local Contacts</h3>
+          <p>Connection with law firms, accountants and other professionals essential to operate successfully in the territory. We make our network of professional contacts available to you to ensure reliable and quality collaborations.</p>
+        </div>
+      </div>
+
+      <div class="benefits-section animate-on-scroll from-bottom">
+        <h2>The advantages of our integrated approach</h2>
+        <ul class="benefits-list">
+          <li><strong>Time and resource savings</strong> - By delegating bureaucratic procedures to us, you can focus on the strategic aspects of your business</li>
+          <li><strong>Risk minimization</strong> - Our experience helps you avoid costly mistakes and delays</li>
+          <li><strong>Quick market entry</strong> - We accelerate the start-up time of your business in Italy</li>
+          <li><strong>Guaranteed regulatory compliance</strong> - We ensure compliance with all Italian laws and regulations</li>
+          <li><strong>Ongoing support</strong> - We remain by your side even after the start of your business</li>
+        </ul>
+      </div>
+
+      <div class="cta-section animate-on-scroll from-bottom">
+        <h3>Ready to expand your business in Italy?</h3>
+        <p>Contact us today for a personalized consultation and discover how we can help you successfully enter the Italian market.</p>
+        <a href="/en#contact" class="btn btn-primary">Request a consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <Contact />
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+
+  .service-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .service-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    font-style: italic;
+  }
+
+  .service-boxes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .service-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .icon-container {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+  }
+
+  .service-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .service-box p {
+    color: var(--text-color);
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  .benefits-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .benefits-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .benefits-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .benefits-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--medium-bg);
+    display: flex;
+    align-items: center;
+  }
+
+  .benefits-list li:last-child {
+    border-bottom: none;
+  }
+
+  .benefits-list li:before {
+    content: "✓";
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .cta-section {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+  }
+
+  .cta-section h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .cta-section p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .cta-section .btn {
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .cta-section .btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .service-boxes-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .service-intro h2,
+    .benefits-section h2 {
+      font-size: 1.8rem;
+    }
+
+    .cta-section h3 {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+
+<script>
+  // Add Font Awesome for icons
+  document.addEventListener('DOMContentLoaded', () => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+    document.head.appendChild(link);
+  });
+</script>

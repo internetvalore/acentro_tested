@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceDetailHeader from '../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../components/ServiceDetailBox.astro';
+---
+
+<Layout title="DIGIPRAM - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="DIGIPRAM" 
+    description="Il gestionale per le agenzie di pratiche amministrative"
+    icon="/images/service-icon-1.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>DIGIPRAM</strong> è il gestionale pensato specificamente per le agenzie di pratiche amministrative, 
+          offrendo una soluzione completa e integrata per la gestione efficiente di tutte le attività.
+        </p>
+        <p>
+          Con DIGIPRAM puoi ottimizzare i processi, ridurre i tempi di lavoro e migliorare la qualità dei servizi offerti ai tuoi clienti.
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Funzionalità Principali</h2>
+        <div class="service-boxes">
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Gestione Pratiche" 
+              description="Organizzazione efficiente di tutte le pratiche amministrative con monitoraggio dello stato di avanzamento."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Integrazione Fatturazione" 
+              description="Completa integrazione con i sistemi di fatturazione elettronica per una gestione contabile semplificata."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Gestione Documentale" 
+              description="Archiviazione e organizzazione di tutti i documenti relativi alle pratiche in un unico sistema."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Reportistica Avanzata" 
+              description="Generazione di report dettagliati sull'andamento delle pratiche e sull'attività dell'agenzia."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Scopri come DIGIPRAM può rivoluzionare la tua agenzia</h3>
+        <p>Contattaci per una demo gratuita e scopri come DIGIPRAM può aiutarti a gestire al meglio la tua attività.</p>
+        <a href="/contattaci" class="btn btn-primary">Richiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-boxes > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

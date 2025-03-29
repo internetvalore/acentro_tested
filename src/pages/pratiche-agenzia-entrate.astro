@@ -1,0 +1,208 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceDetailHeader from '../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Pratiche Agenzia delle Entrate - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Pratiche Agenzia delle Entrate" 
+    description="Soluzioni complete per tutte le pratiche relative all'Agenzia delle Entrate"
+    icon="/images/service-icon-2.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>Acentro Services</strong> offre diversi servizi relativi all'Agenzia delle Entrate, 
+          proponendosi come supporto per la gestione di formalità e adempimenti verso enti e pubbliche amministrazioni.
+        </p>
+        <p>
+          Ecco una lista dettagliata dei servizi offerti:
+        </p>
+      </div>
+      
+      <div class="service-boxes">
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Attribuzione, modifica o cessazione di partita IVA" 
+            description="Supporto completo per aprire, modificare o chiudere la partita IVA di un'attività."
+            icon="/images/service-icon-3.svg"
+          />
+        </a>
+        
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Attribuzione Codice Fiscale" 
+            description="Assistenza per l'ottenimento del codice fiscale per persone fisiche e giuridiche."
+            icon="/images/service-icon-1.svg"
+          />
+        </a>
+        
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Registrazione e risoluzione contratti di locazione" 
+            description="Gestione completa delle pratiche di registrazione e risoluzione dei contratti di affitto."
+            icon="/images/service-icon-2.svg"
+          />
+        </a>
+        
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Pagamenti annualità successive e proroghe" 
+            description="Assistenza per i pagamenti periodici e le proroghe relative ai contratti registrati."
+            icon="/images/service-icon-3.svg"
+          />
+        </a>
+        
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Registrazione Atti/Verbali" 
+            description="Supporto per la registrazione di atti e verbali presso l'Agenzia delle Entrate."
+            icon="/images/service-icon-1.svg"
+          />
+        </a>
+        
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Certificati IVA e/o doppia imposizione" 
+            description="Ottenimento di certificazioni relative all'IVA e alla doppia imposizione fiscale."
+            icon="/images/service-icon-2.svg"
+          />
+        </a>
+        
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Certificati regolarità fiscale" 
+            description="Richiesta e ottenimento di certificati attestanti la regolarità fiscale del contribuente."
+            icon="/images/service-icon-3.svg"
+          />
+        </a>
+        
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Certificati carichi pendenti fiscali" 
+            description="Assistenza per l'ottenimento di certificati relativi ai carichi pendenti fiscali."
+            icon="/images/service-icon-1.svg"
+          />
+        </a>
+        
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Iscrizioni e variazioni Agenzia delle Entrate" 
+            description="Supporto per le procedure di iscrizione e variazione dati presso l'Agenzia delle Entrate."
+            icon="/images/service-icon-2.svg"
+          />
+        </a>
+        
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Registrazione contratti" 
+            description="Assistenza completa per la registrazione di contratti di varia natura."
+            icon="/images/service-icon-3.svg"
+          />
+        </a>
+        
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Registrazione verbali distribuzione dividendi" 
+            description="Supporto per la registrazione dei verbali di distribuzione dividendi societari."
+            icon="/images/service-icon-1.svg"
+          />
+        </a>
+        
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Certificati carichi pendenti" 
+            description="Ottenimento di certificazioni relative ai carichi pendenti presso l'Agenzia delle Entrate."
+            icon="/images/service-icon-3.svg"
+          />
+        </a>
+        
+        <a href="/contattaci">
+          <ServiceDetailBox 
+            title="Contratto di locazione e scadenziario per rinnovi on-line" 
+            description="Gestione digitale dei contratti di locazione con sistema di promemoria per i rinnovi."
+            icon="/images/service-icon-1.svg"
+          />
+        </a>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Hai bisogno di assistenza per le tue pratiche con l'Agenzia delle Entrate?</h3>
+        <p>Contattaci per una consulenza personalizzata e scopri come possiamo aiutarti a semplificare i tuoi adempimenti fiscali.</p>
+        <a href="/contattaci" class="btn btn-primary">Richiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .service-boxes > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

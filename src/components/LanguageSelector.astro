@@ -1,0 +1,95 @@
+---
+import { getLangFromUrl } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
+
+// Mapping between Italian and English routes
+const routeMap = {
+  '/': '/en',
+  '/chi-siamo': '/en/about-us',
+  '/contattaci': '/en/contattaci',
+  '/perche-noi': '/en/perche-noi',
+  '/servizi-digitali': '/en/servizi-digitali',
+  '/servizi-professionisti': '/en/servizi-professionisti',
+  '/digipram': '/en/digipram',
+  '/entrare-nel-mercato-italiano': '/en/entering-italian-market',
+  '/registrazione-marchi': '/en/registrazione-marchi',
+  '/pratiche-agenzia-entrate': '/en/pratiche-agenzia-entrate',
+  '/pratiche-camera-commercio': '/en/pratiche-camera-commercio',
+  '/pratiche-catastali': '/en/pratiche-catastali',
+  '/pratiche-comune': '/en/pratiche-comune',
+  '/pratiche-equitalia': '/en/pratiche-equitalia',
+  '/pratiche-giudice-pace': '/en/pratiche-giudice-pace',
+  '/pratiche-inps': '/en/pratiche-inps',
+  '/pratiche-inail': '/en/pratiche-inail',
+  '/pratiche-inps-inail': '/en/pratiche-inps-inail',
+
+  // Reverse mapping
+  '/en': '/',
+  '/en/about-us': '/chi-siamo',
+  '/en/contattaci': '/contattaci',
+  '/en/perche-noi': '/perche-noi',
+  '/en/servizi-digitali': '/servizi-digitali',
+  '/en/servizi-professionisti': '/servizi-professionisti',
+  '/en/digipram': '/digipram',
+  '/en/entering-italian-market': '/entrare-nel-mercato-italiano',
+  '/en/registrazione-marchi': '/registrazione-marchi',
+  '/en/pratiche-agenzia-entrate': '/pratiche-agenzia-entrate',
+  '/en/pratiche-camera-commercio': '/pratiche-camera-commercio',
+  '/en/pratiche-catastali': '/pratiche-catastali',
+  '/en/pratiche-comune': '/pratiche-comune',
+  '/en/pratiche-equitalia': '/pratiche-equitalia',
+  '/en/pratiche-giudice-pace': '/pratiche-giudice-pace',
+  '/en/pratiche-inps': '/pratiche-inps',
+  '/en/pratiche-inail': '/pratiche-inail',
+  '/en/pratiche-inps-inail': '/pratiche-inps-inail'
+};
+
+const finalPath = routeMap[currentPath] || (lang === 'it' ? `/en${currentPath === '/' ? '' : currentPath}` : currentPath.replace(/^\/en/, '') || '/');
+---
+
+<div class="language-selector">
+  {lang === 'it' ? (
+    <a href={finalPath} class="language-link">
+      <span class="language-text">English</span>
+    </a>
+  ) : (
+    <a href={finalPath} class="language-link">
+      <span class="language-text">Italiano</span>
+    </a>
+  )}
+</div>
+
+<style>
+  .language-selector {
+    margin-left: 1rem;
+  }
+
+  .language-link {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .language-link:hover {
+    background-color: var(--accent-hover);
+  }
+
+  .language-text {
+    margin-left: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .language-selector {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,208 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceDetailHeader from '../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Pratiche Comune - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Pratiche Comune" 
+    description="Soluzioni complete per tutte le pratiche relative al Comune"
+    icon="/images/service-icon-2.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>Acentro Services</strong> offre diversi servizi relativi alle <strong>pratiche comunali</strong>, 
+          proponendosi come supporto per la gestione di formalità e adempimenti verso enti e pubbliche amministrazioni.
+        </p>
+        <p>
+          Ecco una lista dettagliata dei servizi offerti per le pratiche relative al Comune:
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Autorizzazioni e Certificati</h2>
+        <div class="service-boxes">
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Autorizzazioni e Comunicazioni" 
+              description="Assistenza completa per la gestione delle autorizzazioni e comunicazioni con gli uffici comunali."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="SCIA - SUAP" 
+              description="Raccogliamo e gestisiamo diverse pratiche per facilitare l'avvio e la gestione delle attività produttive e commerciali."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Certificati vari" 
+              description="Richiesta e ritiro di certificati anagrafici, estratti e altra documentazione comunale."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Presentazione documentazione ufficio Protocolli" 
+              description="Assistenza per la presentazione di documenti presso l'ufficio Protocolli del Comune."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+        </div>
+      </div>
+      
+      <div class="service-category">
+        <h2>Autorizzazioni Speciali</h2>
+        <div class="service-boxes">
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Vidimazione registro preziosi e cose usate" 
+              description="Assistenza per la vidimazione dei registri obbligatori per commercianti di preziosi e oggetti usati."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Autorizzazione occupazione spazio e aree pubbliche" 
+              description="Supporto per l'ottenimento di autorizzazioni per l'occupazione di spazi e aree pubbliche."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Autorizzazioni insegne e dissuasori di sosta" 
+              description="Assistenza per le pratiche relative all'installazione di insegne commerciali e dissuasori di sosta."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+        </div>
+      </div>
+      
+      <div class="service-category">
+        <h2>Contratti e Licenze</h2>
+        <div class="service-boxes">
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Contratti di locazione" 
+              description="Assistenza completa per la gestione dei contratti di locazione e relativi adempimenti."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Predisposizione e invio contratti di locazione" 
+              description="Supporto nella preparazione e registrazione dei contratti di locazione presso gli uffici competenti."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Gestione di richieste di licenze o autorizzazioni" 
+              description="Assistenza per la gestione di SCIA, DIA e altre autorizzazioni necessarie per l'avvio di attività."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Hai bisogno di assistenza per le tue pratiche comunali?</h3>
+        <p>Contattaci per una consulenza personalizzata e scopri come possiamo aiutarti a semplificare la gestione delle tue pratiche con il Comune.</p>
+        <a href="/contattaci" class="btn btn-primary">Richiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-boxes > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

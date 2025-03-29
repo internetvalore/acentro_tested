@@ -1,0 +1,351 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceDetailHeader from '../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Pratiche Giudice di Pace - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Pratiche Giudice di Pace" 
+    description="Assistenza completa per tutte le pratiche presso l'ufficio del Giudice di Pace"
+    icon="/images/service-icon-1.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>Acentro Services</strong> offre un servizio completo di assistenza per le <strong>pratiche presso il Giudice di Pace</strong>, 
+          supportando privati e professionisti nella gestione di tutte le formalità necessarie.
+        </p>
+        <p>
+          Il nostro team di esperti si occupa di ogni aspetto procedurale, garantendo efficienza e professionalità in ogni fase.
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Servizi per Cause Civili</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Formazione fascicoli" 
+            description="Preparazione completa della documentazione necessaria per l'avvio di procedimenti civili presso il Giudice di Pace."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Deposito atti" 
+            description="Servizio di deposito di ricorsi, memorie e documenti presso la cancelleria del Giudice di Pace, con verifica della corretta ricezione."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Monitoraggio decreti ingiuntivi" 
+            description="Controllo costante dello stato di avanzamento dei decreti ingiuntivi, con aggiornamenti tempestivi al cliente."
+            icon="/images/service-icon-3.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Notificazioni" 
+            description="Gestione completa delle procedure di notifica degli atti giudiziari, garantendo il rispetto dei termini e delle modalità previste dalla legge."
+            icon="/images/service-icon-1.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-category">
+        <h2>Servizi per Opposizioni</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Opposizione a sanzioni amministrative" 
+            description="Assistenza nella preparazione e nel deposito di ricorsi contro multe e sanzioni amministrative, con analisi preliminare della documentazione."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Opposizione a cartelle esattoriali" 
+            description="Supporto completo per contestare cartelle di pagamento emesse da enti di riscossione, con verifica della legittimità delle pretese."
+            icon="/images/service-icon-3.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Ricorsi in materia condominiale" 
+            description="Assistenza nella gestione di controversie condominiali di competenza del Giudice di Pace, con preparazione della documentazione necessaria."
+            icon="/images/service-icon-1.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-additional-info">
+        <h3>Consulenza Preliminare</h3>
+        <p>
+          Offriamo un servizio di consulenza preliminare per valutare la fattibilità e le possibilità di successo delle azioni da intraprendere presso il Giudice di Pace.
+          Il nostro team analizza la documentazione disponibile e fornisce un parere professionale sulle strategie più efficaci da adottare.
+        </p>
+        
+        <h3>Assistenza Digitale</h3>
+        <p>
+          Acentro Services supporta i clienti anche nella gestione digitale delle pratiche, offrendo servizi come la <strong>Firma Digitale</strong> e la <strong>Posta Elettronica Certificata (PEC)</strong>,
+          strumenti essenziali per la comunicazione con gli uffici giudiziari.
+        </p>
+      </div>
+      
+      <div class="service-process">
+        <h3>Come Funziona il Nostro Servizio</h3>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Analisi Preliminare</h4>
+              <p>Valutiamo la documentazione e definiamo la strategia più efficace per il tuo caso.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Preparazione Documentazione</h4>
+              <p>Prepariamo tutti i documenti necessari secondo le normative vigenti.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Deposito e Notifiche</h4>
+              <p>Ci occupiamo del deposito degli atti e delle eventuali notifiche necessarie.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Monitoraggio e Aggiornamenti</h4>
+              <p>Seguiamo l'evoluzione della pratica e ti teniamo costantemente aggiornato.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-benefits">
+        <h3>Vantaggi del nostro servizio</h3>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <h4>Risparmio di tempo</h4>
+            <p>Eviti lunghe attese e procedure burocratiche complesse presso gli uffici del Giudice di Pace.</p>
+          </div>
+          <div class="benefit-item">
+            <h4>Competenza specializzata</h4>
+            <p>Il nostro team ha esperienza specifica nelle procedure presso il Giudice di Pace.</p>
+          </div>
+          <div class="benefit-item">
+            <h4>Monitoraggio costante</h4>
+            <p>Teniamo sotto controllo lo stato di avanzamento delle tue pratiche con aggiornamenti regolari.</p>
+          </div>
+          <div class="benefit-item">
+            <h4>Massima precisione</h4>
+            <p>Garantiamo la corretta compilazione e il puntuale deposito di tutti i documenti necessari.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Hai bisogno di assistenza per pratiche presso il Giudice di Pace?</h3>
+        <p>Contattaci per una consulenza personalizzata e scopri come possiamo aiutarti a gestire efficacemente le tue pratiche legali.</p>
+        <a href="/contattaci" class="btn btn-primary">Richiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-additional-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-additional-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .service-additional-info p {
+    margin-bottom: 2rem;
+  }
+  
+  .service-process {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-process h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .step-number {
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  
+  .step-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .service-benefits {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-benefits h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .benefit-item {
+    padding: 1.5rem;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .benefit-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .benefit-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .process-step {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .step-content {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

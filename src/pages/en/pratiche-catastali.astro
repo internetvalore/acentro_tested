@@ -1,0 +1,177 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ServiceDetailHeader from '../../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Cadastral Practices - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Cadastral Practices" 
+    description="Complete solutions for all Cadastral practices"
+    icon="/images/service-icon-3.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>Acentro Services</strong> offers various services related to <strong>cadastral practices</strong>. 
+          We provide support for managing formalities and compliance with public administration entities.
+        </p>
+        <p>
+          Here is a detailed list of services offered for cadastral practices:
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Cadastral Services</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Online Cadastral Reports" 
+            description="Request and obtaining of online cadastral reports for land and buildings, with updated and complete information."
+            icon="/images/service-icon-3.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Online Report, Floor Plan, and Property Consistency" 
+            description="Complete service including report, cadastral floor plan, and details on property consistency."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Map Extracts" 
+            description="Request and obtaining of cadastral map extracts, essential for verifying the correct graphical representation of properties."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Cadastral Floor Plans" 
+            description="Recovery of cadastral floor plans that graphically represent the internal layout of properties and their measurements."
+            icon="/images/service-icon-3.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-category">
+        <h2>Land Registry Services</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Mortgage Inspections" 
+            description="Verification of mortgages, seizures, or other encumbrances on properties through inspections at the Land Registry."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Document Filing" 
+            description="Complete assistance for filing documents with the Land Registry."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Mortgage Reports" 
+            description="Request and obtaining of mortgage reports to verify the legal status of properties."
+            icon="/images/service-icon-3.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Transcriptions" 
+            description="Management of deed transcription practices at the Land Registry."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Annotations" 
+            description="Assistance with annotation practices in the margins of transcriptions."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Cancellations" 
+            description="Support for practices of mortgage and other encumbrance cancellations."
+            icon="/images/service-icon-3.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Need assistance with your cadastral practices?</h3>
+        <p>Contact us for a personalized consultation and discover how we can help you simplify the management of your practices with the Cadastre.</p>
+        <a href="/en/contattaci" class="btn btn-primary">Request Information</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

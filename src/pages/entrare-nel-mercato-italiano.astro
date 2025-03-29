@@ -1,0 +1,258 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ServiceDetailHeader from '../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../components/ServiceDetailBox.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t('services.estero')}>
+  <Header />
+  <ServiceDetailHeader 
+    title={t('services.estero')}
+    subtitle={t('services.estero.desc')}
+  />
+
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro animate-on-scroll from-bottom">
+        <h2>Servizio "Chiavi in Mano per l'Investitore"</h2>
+        <p class="intro-text">
+          Mettiamo a disposizione la nostra esperienza e rete di contatti per guidarvi in ogni fase del processo di localizzazione in Italia. Dalla scelta della struttura societaria più adatta, alla gestione completa delle pratiche burocratiche, fino all'individuazione di soluzioni immobiliari e finanziarie, vi offriamo un percorso personalizzato e senza intoppi. Affidateci il compito di tradurre e interpretare il complesso mondo delle normative italiane, per concentrarvi sul vostro core business e cogliere le opportunità di mercato con sicurezza.
+        </p>
+      </div>
+
+      <div class="service-boxes-grid">
+        <div class="service-box animate-on-scroll from-left">
+          <div class="icon-container">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h3>Consulenza strategica e legale</h3>
+          <p>Analisi preliminare della migliore forma giuridica, orientamento in tema di diritto societario, fiscale e del lavoro. Ti guidiamo nella scelta della struttura più adatta alle tue esigenze, con un'analisi dettagliata dei vantaggi e degli obblighi legali.</p>
+        </div>
+
+        <div class="service-box animate-on-scroll from-right">
+          <div class="icon-container">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3>Assistenza amministrativa</h3>
+          <p>Gestione e predisposizione di tutta la documentazione necessaria, ottenimento di codici fiscali, registrazioni e permessi. Ci occupiamo di tutte le pratiche burocratiche, risparmiandoti tempo e complicazioni, garantendo la conformità a tutte le normative italiane.</p>
+        </div>
+
+        <div class="service-box animate-on-scroll from-left">
+          <div class="icon-container">
+            <i class="fas fa-language"></i>
+          </div>
+          <h3>Servizi di traduzione e mediazione culturale</h3>
+          <p>Facilitazione nelle comunicazioni, traduzioni e interpretariato per superare le barriere linguistiche e culturali. Ti offriamo un supporto completo per comprendere non solo la lingua, ma anche le sfumature culturali del fare business in Italia.</p>
+        </div>
+
+        <div class="service-box animate-on-scroll from-right">
+          <div class="icon-container">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>Networking e contatti locali</h3>
+          <p>Collegamento con studi legali, commercialisti e altri professionisti essenziali per operare con successo sul territorio. Mettiamo a tua disposizione la nostra rete di contatti professionali per garantirti collaborazioni affidabili e di qualità.</p>
+        </div>
+      </div>
+
+      <div class="benefits-section animate-on-scroll from-bottom">
+        <h2>I vantaggi del nostro approccio integrato</h2>
+        <ul class="benefits-list">
+          <li><strong>Risparmio di tempo e risorse</strong> - Delegando a noi le pratiche burocratiche, potrai concentrarti sugli aspetti strategici del tuo business</li>
+          <li><strong>Minimizzazione dei rischi</strong> - La nostra esperienza ti aiuta a evitare errori costosi e ritardi</li>
+          <li><strong>Ingresso rapido nel mercato</strong> - Acceleriamo i tempi di avvio della tua attività in Italia</li>
+          <li><strong>Conformità normativa garantita</strong> - Assicuriamo il rispetto di tutte le leggi e i regolamenti italiani</li>
+          <li><strong>Supporto continuativo</strong> - Restiamo al tuo fianco anche dopo l'avvio dell'attività</li>
+        </ul>
+      </div>
+
+      <div class="cta-section animate-on-scroll from-bottom">
+        <h3>Pronto a espandere il tuo business in Italia?</h3>
+        <p>Contattaci oggi stesso per una consulenza personalizzata e scopri come possiamo aiutarti a entrare con successo nel mercato italiano.</p>
+        <a href="#contact" class="btn btn-primary">Richiedi una consulenza</a>
+      </div>
+    </div>
+  </section>
+
+  <Contact />
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+
+  .service-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .service-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    font-style: italic;
+  }
+
+  .service-boxes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .service-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .icon-container {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+  }
+
+  .service-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .service-box p {
+    color: var(--text-color);
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  .benefits-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .benefits-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .benefits-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .benefits-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--medium-bg);
+    display: flex;
+    align-items: center;
+  }
+
+  .benefits-list li:last-child {
+    border-bottom: none;
+  }
+
+  .benefits-list li:before {
+    content: "✓";
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .cta-section {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+  }
+
+  .cta-section h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .cta-section p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .cta-section .btn {
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .cta-section .btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .service-boxes-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .service-intro h2,
+    .benefits-section h2 {
+      font-size: 1.8rem;
+    }
+
+    .cta-section h3 {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+
+<script>
+  // Add Font Awesome for icons
+  document.addEventListener('DOMContentLoaded', () => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+    document.head.appendChild(link);
+  });
+</script>

@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceDetailHeader from '../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Servizi per Professionisti - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Servizi per Professionisti" 
+    description="Supporto completo per professionisti con servizi mirati e consulenza specializzata"
+    icon="/images/service-icon-3.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>Acentro Services</strong> offre una vasta gamma di servizi dedicati ai professionisti, 
+          fornendo supporto specializzato e consulenza mirata per ottimizzare la gestione delle loro attività.
+        </p>
+        <p>
+          Il nostro team di esperti è a disposizione per offrire soluzioni personalizzate e assistenza completa in diversi ambiti professionali.
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Servizi Contabili e Fiscali</h2>
+        <div class="service-boxes">
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Tenuta della contabilità" 
+              description="Gestione completa della contabilità, dalla registrazione delle fatture alla predisposizione del bilancio."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Dichiarazioni fiscali" 
+              description="Predisposizione e invio delle dichiarazioni fiscali, garantendo il rispetto delle normative vigenti."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Consulenza tributaria" 
+              description="Consulenza specializzata in materia tributaria per ottimizzare il carico fiscale e risolvere eventuali problematiche."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+        </div>
+      </div>
+      
+      <div class="service-category">
+        <h2>Servizi Amministrativi</h2>
+        <div class="service-boxes">
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Gestione della fatturazione elettronica" 
+              description="Supporto completo nella gestione della fatturazione elettronica, dall'emissione alla conservazione delle fatture."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Gestione documentale" 
+              description="Organizzazione e archiviazione dei documenti, garantendo la loro corretta conservazione e facile reperibilità."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Pratiche amministrative" 
+              description="Gestione delle pratiche amministrative presso gli enti pubblici, semplificando gli adempimenti burocratici."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+        </div>
+      </div>
+      
+      <div class="service-category">
+        <h2>Servizi Digitali</h2>
+        <div class="service-boxes">
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Firma digitale" 
+              description="Rilascio e gestione della firma digitale per la sottoscrizione di documenti con valore legale."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Posta Elettronica Certificata (PEC)" 
+              description="Attivazione e gestione della PEC per comunicazioni con valore legale."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="SPID" 
+              description="Assistenza per l'ottenimento dello SPID, l'identità digitale per accedere ai servizi online della pubblica amministrazione."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Hai bisogno di supporto per la tua attività professionale?</h3>
+        <p>Contattaci per una consulenza personalizzata e scopri come possiamo aiutarti a semplificare la gestione della tua attività.</p>
+        <a href="/contattaci" class="btn btn-primary">Richiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-boxes > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

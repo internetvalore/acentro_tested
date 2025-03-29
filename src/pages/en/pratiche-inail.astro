@@ -1,0 +1,145 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ServiceDetailHeader from '../../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../../components/ServiceDetailBox.astro';
+---
+
+<Layout title="INAIL Practices - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="INAIL Practices" 
+    description="Complete solutions for all INAIL practices"
+    icon="/images/service-icon-3.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>Acentro Services</strong> offers complete assistance for all practices related to <strong>INAIL</strong>, 
+          supporting businesses and professionals in managing insurance obligations.
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Our INAIL Services</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Registrations, modifications and terminations" 
+            description="Complete management of registration, variation and termination practices for INAIL positions."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Tax Bills and Payment Notice Verification" 
+            description="Control and verification of tax bills and payment notices issued by INAIL."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Annual Self-Assessment" 
+            description="Assistance with calculating and paying INAIL annual self-assessment."
+            icon="/images/service-icon-3.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Insurance Certificates" 
+            description="Request and obtaining of insurance certificates and contribution regularity attestations."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Accident Reports" 
+            description="Support in managing and submitting accident reports."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Risk Variations" 
+            description="Assistance in communicating variations in work activities and insured risks."
+            icon="/images/service-icon-3.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Need assistance with your INAIL practices?</h3>
+        <p>Contact us for a personalized consultation and discover how we can help you simplify your insurance compliance.</p>
+        <a href="/en/contattaci" class="btn btn-primary">Request Information</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

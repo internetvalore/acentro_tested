@@ -1,0 +1,194 @@
+# Configurazione globale per il sito Netlify
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Reindirizzamenti specifici per le pagine in italiano
+[[redirects]]
+  from = "/chi-siamo"
+  to = "/chi-siamo/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/contattaci"
+  to = "/contattaci/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/perche-noi"
+  to = "/perche-noi/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/servizi-digitali"
+  to = "/servizi-digitali/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/servizi-professionisti"
+  to = "/servizi-professionisti/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/digipram"
+  to = "/digipram/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/entrare-nel-mercato-italiano"
+  to = "/entrare-nel-mercato-italiano/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/registrazione-marchi"
+  to = "/registrazione-marchi/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pratiche-agenzia-entrate"
+  to = "/pratiche-agenzia-entrate/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pratiche-camera-commercio"
+  to = "/pratiche-camera-commercio/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pratiche-catastali"
+  to = "/pratiche-catastali/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pratiche-comune"
+  to = "/pratiche-comune/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pratiche-equitalia"
+  to = "/pratiche-equitalia/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pratiche-giudice-pace"
+  to = "/pratiche-giudice-pace/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pratiche-inps"
+  to = "/pratiche-inps/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pratiche-inail"
+  to = "/pratiche-inail/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pratiche-inps-inail"
+  to = "/pratiche-inps-inail/index.html"
+  status = 200
+
+# Reindirizzamenti specifici per le pagine in inglese
+[[redirects]]
+  from = "/en/about-us"
+  to = "/en/about-us/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/contact"
+  to = "/en/contattaci/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/why-us"
+  to = "/en/perche-noi/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/digital-services"
+  to = "/en/digital-services/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/professional-services"
+  to = "/en/servizi-professionisti/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/digipram"
+  to = "/en/digipram/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/entering-italian-market"
+  to = "/en/entering-italian-market/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/trademark-registration"
+  to = "/en/registrazione-marchi/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/revenue-agency-practices"
+  to = "/en/pratiche-agenzia-entrate/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/chamber-commerce-practices"
+  to = "/en/pratiche-camera-commercio/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/cadastral-practices"
+  to = "/en/pratiche-catastali/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/municipal-practices"
+  to = "/en/pratiche-comune/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/equitalia-practices"
+  to = "/en/pratiche-equitalia/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/justice-peace-practices"
+  to = "/en/pratiche-giudice-pace/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/inps-practices"
+  to = "/en/pratiche-inps/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/inail-practices"
+  to = "/en/pratiche-inail/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/inps-inail-practices"
+  to = "/en/pratiche-inps-inail/index.html"
+  status = 200
+
+# Fallback per la sezione inglese
+[[redirects]]
+  from = "/en/*"
+  to = "/en/index.html"
+  status = 200
+
+# Fallback per la sezione italiana
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Gestione 404
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

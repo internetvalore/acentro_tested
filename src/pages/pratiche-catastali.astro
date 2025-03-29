@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceDetailHeader from '../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Pratiche Catastali - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Pratiche Catastali" 
+    description="Soluzioni complete per tutte le pratiche relative al Catasto"
+    icon="/images/service-icon-3.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>Acentro Services</strong> offre diversi servizi relativi alle <strong>pratiche catastali</strong>, 
+          proponendosi come supporto per la gestione di formalità e adempimenti verso enti e pubbliche amministrazioni.
+        </p>
+        <p>
+          Ecco una lista dettagliata dei servizi offerti per le pratiche relative al Catasto:
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Servizi Catastali</h2>
+        <div class="service-boxes">
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Visure Catastali online" 
+              description="Richiesta e ottenimento di visure catastali online per terreni e fabbricati, con informazioni aggiornate e complete."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Visura online, piantina e consistenza patrimoniale" 
+              description="Servizio completo che include visura, planimetria catastale e dettagli sulla consistenza patrimoniale degli immobili."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Estratti di mappa" 
+              description="Richiesta e ottenimento di estratti di mappa catastale, fondamentali per verificare la corretta rappresentazione grafica degli immobili."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Planimetrie catastali" 
+              description="Recupero di planimetrie catastali che rappresentano graficamente la disposizione interna degli immobili e le relative misure."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+        </div>
+      </div>
+      
+      <div class="service-category">
+        <h2>Servizi di Conservatoria</h2>
+        <div class="service-boxes">
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Ispezioni ipotecarie" 
+              description="Verifica della presenza di ipoteche, pignoramenti o altri gravami sugli immobili attraverso ispezioni presso la Conservatoria."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Deposito atti" 
+              description="Assistenza completa per il deposito di atti presso la Conservatoria dei Registri Immobiliari."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Visure ipotecarie" 
+              description="Richiesta e ottenimento di visure ipotecarie per verificare la situazione giuridica degli immobili."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Trascrizioni" 
+              description="Gestione delle pratiche di trascrizione di atti presso la Conservatoria."
+              icon="/images/service-icon-1.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Annotazioni" 
+              description="Assistenza per le pratiche di annotazione a margine delle trascrizioni."
+              icon="/images/service-icon-2.svg"
+            />
+          </a>
+          
+          <a href="/contattaci">
+            <ServiceDetailBox 
+              title="Cancellazioni" 
+              description="Supporto per le pratiche di cancellazione di ipoteche e altri gravami."
+              icon="/images/service-icon-3.svg"
+            />
+          </a>
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Hai bisogno di assistenza per le tue pratiche catastali?</h3>
+        <p>Contattaci per una consulenza personalizzata e scopri come possiamo aiutarti a semplificare la gestione delle tue pratiche con il Catasto.</p>
+        <a href="/contattaci" class="btn btn-primary">Richiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-boxes > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

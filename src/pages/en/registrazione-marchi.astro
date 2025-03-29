@@ -1,0 +1,273 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ServiceDetailHeader from '../../components/ServiceDetailHeader.astro';
+import ServiceDetailBox from '../../components/ServiceDetailBox.astro';
+---
+
+<Layout title="Trademark Registration - Acentro Services">
+  <Header />
+  
+  <ServiceDetailHeader 
+    title="Trademark Registration" 
+    description="Complete assistance for national trademark registration"
+    icon="/images/service-icon-2.svg"
+  />
+  
+  <section class="service-detail-section">
+    <div class="container">
+      <div class="service-intro">
+        <p>
+          <strong>Acentro Services</strong> offers a complete assistance service for <strong>national trademark registration</strong>, 
+          guiding clients through the entire process of registering and protecting their trademark.
+        </p>
+      </div>
+      
+      <div class="service-category">
+        <h2>Our Services</h2>
+        <div class="service-boxes">
+          <ServiceDetailBox 
+            title="Prior Art Searches" 
+            description="Preliminary verification of the existence of similar or identical registered trademarks."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Documentation Preparation" 
+            description="Assistance in preparing all necessary documentation for registration."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Application Filing" 
+            description="Complete management of the registration application filing process."
+            icon="/images/service-icon-3.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Practice Monitoring" 
+            description="Constant monitoring of the registration practice progress."
+            icon="/images/service-icon-1.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Opposition Management" 
+            description="Support in managing any oppositions to registration."
+            icon="/images/service-icon-2.svg"
+          />
+          
+          <ServiceDetailBox 
+            title="Renewals and Maintenance" 
+            description="Assistance for renewal and maintenance of registered trademarks."
+            icon="/images/service-icon-3.svg"
+          />
+        </div>
+      </div>
+      
+      <div class="service-process">
+        <h3>The Registration Process</h3>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Preliminary Check</h4>
+              <p>Feasibility analysis and prior art search to verify trademark availability.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Documentation Preparation</h4>
+              <p>Collection and preparation of all documents necessary for registration.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Application Filing</h4>
+              <p>Submission of the registration application to competent offices.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Monitoring and Assistance</h4>
+              <p>Control of the registration process and management of any requests or oppositions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-additional-info">
+        <h3>Related Digital Services</h3>
+        <p>
+          Acentro Services also offers digital services such as <strong>Digital Signature</strong> and <strong>Certified Email (PEC)</strong>, 
+          essential tools for managing trademark registration practices.
+        </p>
+        
+        <h3>DIGIPRAM: The Management Software for Administrative Practices</h3>
+        <p>
+          Additionally, Acentro Services provides DIGIPRAM, a management software designed for administrative practice agencies, 
+          which facilitates practice management and offers features such as document management.
+        </p>
+      </div>
+      
+      <div class="service-cta">
+        <h3>Want to register your trademark?</h3>
+        <p>Contact us for a personalized consultation and discover how we can help you protect your intellectual property.</p>
+        <a href="/en/contattaci" class="btn btn-primary">Request Information</a>
+      </div>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-detail-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+  }
+  
+  .service-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .service-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .service-category {
+    margin-bottom: 3rem;
+  }
+  
+  .service-category h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-process {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-process h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .step-number {
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  
+  .step-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .service-additional-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-additional-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .service-additional-info p {
+    margin-bottom: 2rem;
+  }
+  
+  .service-cta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-cta p {
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 992px) {
+    .service-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .process-step {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .step-content {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

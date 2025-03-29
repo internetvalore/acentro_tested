@@ -1,0 +1,43 @@
+# Reindirizzamenti specifici per le pagine in italiano
+/chi-siamo    /chi-siamo/index.html    200
+/contattaci    /contattaci/index.html    200
+/perche-noi    /perche-noi/index.html    200
+/servizi-digitali    /servizi-digitali/index.html    200
+/servizi-professionisti    /servizi-professionisti/index.html    200
+/digipram    /digipram/index.html    200
+/entrare-nel-mercato-italiano    /entrare-nel-mercato-italiano/index.html    200
+/registrazione-marchi    /registrazione-marchi/index.html    200
+/pratiche-agenzia-entrate    /pratiche-agenzia-entrate/index.html    200
+/pratiche-camera-commercio    /pratiche-camera-commercio/index.html    200
+/pratiche-catastali    /pratiche-catastali/index.html    200
+/pratiche-comune    /pratiche-comune/index.html    200
+/pratiche-equitalia    /pratiche-equitalia/index.html    200
+/pratiche-giudice-pace    /pratiche-giudice-pace/index.html    200
+/pratiche-inps    /pratiche-inps/index.html    200
+/pratiche-inail    /pratiche-inail/index.html    200
+/pratiche-inps-inail    /pratiche-inps-inail/index.html    200
+
+# Reindirizzamenti specifici per le pagine in inglese
+/en/about-us    /en/about-us/index.html    200
+/en/contact    /en/contattaci/index.html    200
+/en/why-us    /en/perche-noi/index.html    200
+/en/digital-services    /en/digital-services/index.html    200
+/en/professional-services    /en/servizi-professionisti/index.html    200
+/en/digipram    /en/digipram/index.html    200
+/en/entering-italian-market    /en/entering-italian-market/index.html    200
+/en/trademark-registration    /en/registrazione-marchi/index.html    200
+/en/revenue-agency-practices    /en/pratiche-agenzia-entrate/index.html    200
+/en/chamber-commerce-practices    /en/pratiche-camera-commercio/index.html    200
+/en/cadastral-practices    /en/pratiche-catastali/index.html    200
+/en/municipal-practices    /en/pratiche-comune/index.html    200
+/en/equitalia-practices    /en/pratiche-equitalia/index.html    200
+/en/justice-peace-practices    /en/pratiche-giudice-pace/index.html    200
+/en/inps-practices    /en/pratiche-inps/index.html    200
+/en/inail-practices    /en/pratiche-inail/index.html    200
+/en/inps-inail-practices    /en/pratiche-inps-inail/index.html    200
+
+# Fallback per la sezione inglese
+/en/*    /en/index.html    200
+
+# Fallback per SPA
+/*    /index.html   200
